@@ -1,12 +1,11 @@
 /* Template level */
 body {
-	font: 10pt Times, sans-serif;
-	margin: 1.5em 3em;
-
+	font: 12px Times, sans-serif;
+	margin: 24px 48px;
 }
 
 h1 {
-	font: 23pt Georgia, serif;
+	font: 26px Georgia, serif;
 	text-align: center;
 	margin: 5px;
 }
@@ -18,13 +17,17 @@ h2 {
 	margin: 5px 0 2.5px 0;
 }
 
+section {
+	margin: 3px 0;
+}
+
 ul {
 	margin: 0;
-	padding-left: 2.5em;
+	padding-left: 40px;
 }
 
 .item {
-	margin-bottom: .5em;
+	margin-top: 8px;
 }
 
 .item>.item-header {
