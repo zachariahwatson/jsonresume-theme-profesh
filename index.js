@@ -1,30 +1,65 @@
-var fs = require("fs");
-var path = require('path');
-var Handlebars = require("handlebars");
+const
+  fs = require('fs'),
+  handlebars = require('handlebars'),
+  handlebarsWax = require('handlebars-wax'),
+  addressFormat = require('address-format'),
+  moment = require('moment'),
+  Swag = require('swag');
+
+Swag.registerHelpers(handlebars);
+
+handlebars.registerHelper({
+  removeProtocol: function (url) {
+    return url.replace(/.*?:\/\//g, '');
+  },
+
+  concat: function () {
+    let res = '';
+
+    for (let arg in arguments) {
+      if (typeof arguments[arg] !== 'object') {
+        res += arguments[arg];
+      }
+    }
+
+    return res;
+  },
+
+  formatAddress: function (address, city, region, postalCode, countryCode) {
+    let addressList = addressFormat({
+      address: address,
+      city: city,
+      subdivision: region,
+      postalCode: postalCode,
+      countryCode: countryCode
+    });
+
+
+    return addressList.join('<br/>');
+  },
+
+  formatDate: function (date) {
+    return moment(date).format('MMM YYYY');
+  }
+});
+
 
 function render(resume) {
-	var css = fs.readFileSync(__dirname + "/style.css", "utf-8");
-	var tpl = fs.readFileSync(__dirname + "/resume.hbs", "utf-8");
-	var partialsDir = path.join(__dirname, 'partials');
-	var filenames = fs.readdirSync(partialsDir);
+  let dir = __dirname,
+    css = fs.readFileSync(dir + '/style.css', 'utf-8'),
+    resumeTemplate = fs.readFileSync(dir + '/resume.hbs', 'utf-8');
 
-	filenames.forEach(function (filename) {
-	  var matches = /^([^.]+).hbs$/.exec(filename);
-	  if (!matches) {
-	    return;
-	  }
-	  var name = matches[1];
-	  var filepath = path.join(partialsDir, filename)
-	  var template = fs.readFileSync(filepath, 'utf8');
+  let Handlebars = handlebarsWax(handlebars);
 
-	  Handlebars.registerPartial(name, template);
-	});
-	return Handlebars.compile(tpl)({
-		css: css,
-		resume: resume
-	});
+  Handlebars.partials(dir + '/views/**/*.{hbs,js}');
+  Handlebars.partials(dir + '/partials/**/*.{hbs,js}');
+
+  return Handlebars.compile(resumeTemplate)({
+    css: css,
+    resume: resume
+  });
 }
 
 module.exports = {
-	render: render
+  render: render
 };

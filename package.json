@@ -8,7 +8,14 @@
     "url": "https://github.com/erming/jsonresume-theme-boilerplate"
   },
   "license": "MIT",
+  "scripts": {
+    "start": "resume serve --theme ."
+  },
   "dependencies": {
-    "handlebars": "^2.0.0-alpha.4"
+    "address-format": "0.0.3",
+    "handlebars": "^4.7.7",
+    "handlebars-wax": "^6.1.0",
+    "moment": "^2.29.4",
+    "swag": "^0.7.0"
   }
 }

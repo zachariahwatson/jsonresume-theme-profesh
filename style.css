@@ -1,54 +1,70 @@
+/* Template level */
 body {
-	background: #fff;
-	font: 15px Arial, Helvetica, sans-serif;
-	line-height: 1.4;
-	margin: 50px 0;
-	margin-bottom: 100px;
-}
-em {
-	color: #999;
-}
-p {
-	line-height: 1.4;
-}
-ul {
-	margin-bottom: 0;
-}
-section {
-	margin-bottom: 2em;
-}
-blockquote {
-	margin: 0;
-	margin-bottom: 1em;
-}
-.item {
-	margin-bottom: 1em;
-}
-#resume {
-	margin: 0 auto;
-	max-width: 480px;
-	padding: 0 20px;
-}
-#basics {
-	margin-bottom: -10px;
-}
-#basics h3 {
-	margin-top: 1.5em;
-}
-#basics .contact strong,
-#location strong {
-	clear: both;
-	float: left;
-	line-height: 1.3;
-	width: 120px;
-}
-#profiles,
-#skills {
-	overflow: hidden;
-}
-#profiles .item,
-#skills .item {
-	float: left;
-	width: 50%;
+	font: 10pt Times, sans-serif;
+	margin: 1.5em 3em;
+
 }
 
+h1 {
+	font: 23pt Georgia, serif;
+	text-align: center;
+	margin: 5px;
+}
+
+h2 {
+	font-variant-caps: all-small-caps;
+	border-width: 1px;
+	border-style: none none solid none;
+	margin: 5px 0 2.5px 0;
+}
+
+ul {
+	margin: 0;
+	padding-left: 2.5em;
+}
+
+.item {
+	margin-bottom: .5em;
+}
+
+.item>.item-header {
+	float: left;
+	display: block;
+}
+
+.item>.item-header>.item-header-title {
+	font-weight: bold;
+}
+
+.item>.item-header>.item-header-subtitle {
+	font-style: italic;
+}
+
+.item>.item-details {
+	float: right;
+	text-align: right;
+}
+
+.item>.item-details>.item-details-title {
+	font-weight: bold;
+}
+
+.clearfix {
+	clear: both;
+}
+
+.centered {
+	text-align: center;
+}
+
+/* Section specific */
+/* basics */
+.vertical-separator {
+	text-align: center;
+	padding: 0 10px;
+}
+
+.vertical-separator:not(:first-child) {
+	border-left: 1px solid #000;
+	text-align: center;
+}

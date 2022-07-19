@@ -1,0 +1,24 @@
+{{#resume.basics}}
+<section id="basics">
+	<h1>{{name}}</h1>
+	<div class="contact centered">
+		{{#if email}}
+		<span class="vertical-separator">{{email}}</span>
+		{{/if}}
+		{{#if phone}}
+		<span class="vertical-separator">{{phone}}</span>
+		{{/if}}
+		{{#if location}}
+		<span class="vertical-separator">{{location.address}}, {{location.city}}, {{location.region}}</span>
+		{{/if}}
+		{{#if website}}
+		<span class="vertical-separator">{{website}}</span>
+		{{/if}}
+	</div>
+	{{#if summary}}
+	<div class="summary">
+		<p>{{summary}}</p>
+	</div>
+	{{/if}}
+</section>
+{{/resume.basics}}
