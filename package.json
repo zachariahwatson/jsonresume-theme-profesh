@@ -1,11 +1,11 @@
 {
-  "name": "jsonresume-theme-business-professional-compact",
+  "name": "jsonresume-theme-engineering",
   "version": "0.1.2",
-  "description": "Boilerplate theme for JSON Resume",
-  "author": "Vamsi Yechoor",
+  "description": "JSON Resume theme for engineers",
+  "author": "Sören König",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yechoorv/jsonresume-theme-business-professional-compact"
+    "url": "https://github.com/skoenig/jsonresume-theme-engineering"
   },
   "license": "MIT",
   "scripts": {
