@@ -2,6 +2,8 @@
 
 This is the engineering theme for [JSON Resume](http://jsonresume.org/), which aims to implement the best practices for engineering resumes described in https://www.reddit.com/r/EngineeringResumes/wiki/index/. It is intended for [senior/staff level engineers](https://www.reddit.com/r/EngineeringResumes/wiki/index/#wiki_senior_engineers_and_above_.2810.2B_yoe.29).
 
+![Richard Hendriks Resume](./resume.png)
+
 ## Getting started
 
 To get started with theme development, this is what you'll need:
@@ -61,9 +63,16 @@ Preview: http://localhost:4000
 Press ctrl-c to stop
 ```
 
-Congratulations, you've made it!
+Congratulations, you've made it! You can now edit or replace the `resume.json` with your own data or start to modify this theme (see Development section below).
 
-__The theme development can now begin.__
+## Exporting your resume
+To export your resume, you can run the following command below. This will automatically create a `resume.pdf` file within your current directory:
+
+```
+npm run export
+```
+
+Alternatively, you can also do a **print page** on the browser and save it as as PDF (by setting margins to none and removing header/footers.)
 
 ## Development
 
@@ -88,7 +97,7 @@ Lastly, you can put all of your theme dependencies in the `dependencies` field. 
 
 ### index.js
 
-The `index.js` is where all the compiliing of your theme, and neccessary edits will go.
+The `index.js` is where all the compiling of your theme, and necessary edits will go.
 
 At the top, you can already see the Node.js `require` function being used with the dependencies. You can obviously add own dependencies, if you are planning on using a different templating system, you can remove it.
 
@@ -106,7 +115,7 @@ Last but not least, the `style.css` defines your styles. Technically, this is co
 
 ## Deployment
 
-If you are familar with NPM, you should be done with this in no time.
+If you are familiar with NPM, you should be done with this in no time.
 
 If you already have an NPM account, you can run `npm login` and enter your username and password. If not, you can run `npm adduser` and fill in the proper fields.
 
