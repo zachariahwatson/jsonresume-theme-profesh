@@ -47,9 +47,12 @@ handlebars.registerHelper({
 
   formatDate: function (date) {
     return moment(date).format('MMM YYYY');
-  }
-});
+  },
 
+  getValueIfDiffFromPrevious: function (array, index, key) {
+      return (array[index-1] && (array[index][key] === array[index-1][key])) ? '' : array[index][key];
+  },
+});
 
 function render(resume) {
   let dir = __dirname,
