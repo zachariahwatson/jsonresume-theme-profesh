@@ -9,8 +9,15 @@ const
 Swag.registerHelpers(handlebars);
 
 handlebars.registerHelper({
-  removeProtocol: function (url) {
-    return url.replace(/.*?:\/\//g, '');
+
+  wrapURL: function (url) {
+    const wrappedUrl = '<a href="' + url + '">' + url.replace(/.*?:\/\//g, '') + "</a>";
+    return new handlebars.SafeString(wrappedUrl);
+  },
+
+  wrapMail: function (address) {
+    const wrappedAddress = '<a href="mailto:' + address + '">' + address + "</a>";
+    return new handlebars.SafeString(wrappedAddress);
   },
 
   concat: function () {

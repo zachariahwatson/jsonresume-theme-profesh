@@ -1,6 +1,6 @@
 # jsonresume-theme-engineering [![](https://badge.fury.io/js/jsonresume-theme-engineering.svg)](https://www.npmjs.org/package/jsonresume-theme-engineering)
 
-This is the engineering theme for [JSON Resume](http://jsonresume.org/), which aims to implement the best practices for engineering resumes described in https://www.reddit.com/r/EngineeringResumes/wiki/index/. It is intended [senior/staff level engineers](https://www.reddit.com/r/EngineeringResumes/wiki/index/#wiki_senior_engineers_and_above_.2810.2B_yoe.29).
+This is the engineering theme for [JSON Resume](http://jsonresume.org/), which aims to implement the best practices for engineering resumes described in https://www.reddit.com/r/EngineeringResumes/wiki/index/. It is intended for [senior/staff level engineers](https://www.reddit.com/r/EngineeringResumes/wiki/index/#wiki_senior_engineers_and_above_.2810.2B_yoe.29).
 
 ## Getting started
 
