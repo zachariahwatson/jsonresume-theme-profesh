@@ -1,6 +1,6 @@
 # jsonresume-theme-engineering [![](https://badge.fury.io/js/jsonresume-theme-engineering.svg)](https://www.npmjs.org/package/jsonresume-theme-engineering)
 
-This is the engineering theme for [JSON Resume](http://jsonresume.org/), which aims to implement the best practices for engineering resumes described in https://www.reddit.com/r/EngineeringResumes/wiki/index/. It is intended for [senior/staff level engineers](https://www.reddit.com/r/EngineeringResumes/wiki/index/#wiki_senior_engineers_and_above_.2810.2B_yoe.29).
+This is the engineering theme for [JSON Resume](http://jsonresume.org/), based off of [jsonresume-theme-business-professional-compact](https://github.com/yechoorv/jsonresume-theme-business-professional-compact) and aims to implement the best practices for engineering resumes described in https://www.reddit.com/r/EngineeringResumes/wiki/index/. It is intended for [senior/staff level engineers](https://www.reddit.com/r/EngineeringResumes/wiki/index/#wiki_senior_engineers_and_above_.2810.2B_yoe.29).
 
 ![Richard Hendriks Resume](./resume.png)
 
@@ -23,33 +23,18 @@ Or if you're on OSX and got [Homebrew](http://brew.sh/) installed:
 brew install node
 ```
 
-### Download theme
-
-Lets go ahead and download a [copy of the repository](https://github.com/skoenig/jsonresume-theme-engineering/archive/master.zip).
 
 ### Install npm packages
 
-We need to install the dependencies. `cd` into the theme folder we just downloaded and run:
+We need to install the dependencies:
 
 ```bash
 npm install
 ```
 
-This will read the local `package.json` and install the packages listed under `dependencies`.
-
-### Install the command line
-
-We're going to use the official [resume-cli](https://github.com/jsonresume/resume-cli) to run our development server.
-
-Go ahead and install it:
-
-```
-npm install resume-cli
-```
-
 ### Serve theme
 
-While inside the theme folder, copy the sample resume and run the development server:
+If you do not provide a `resume.json` at the root directory level, copy the sample resume and run the development server:
 
 ```
 cp sample-resume.json resume.json
@@ -63,9 +48,9 @@ Preview: http://localhost:4000
 Press ctrl-c to stop
 ```
 
-Congratulations, you've made it! You can now edit or replace the `resume.json` with your own data or start to modify this theme (see Development section below).
+Congratulations, you've made it! You can now start to modify this theme (see Contribute section below).
 
-## Exporting your resume
+## PDF Export
 To export your resume, you can run the following command below. This will automatically create a `resume.pdf` file within your current directory:
 
 ```
@@ -74,56 +59,11 @@ npm run export
 
 Alternatively, you can also do a **print page** on the browser and save it as as PDF (by setting margins to none and removing header/footers.)
 
-## Development
+## Contribute
 
-### Overview
+Currently, this theme is still based on the old [jsonresume-theme-boilerplate](https://github.com/jsonresume/jsonresume-theme-boilerplate), so a look at the README will give you an overview of the files involved in theme modification.
 
-Quick overview of each of the files needed for this JSONResume theme:
-
-- `package.json`: Your package.json is required by all npm packages. Everytime you want to release a new update of your theme, you'll need to update it's version number.
-- `index.js`: This is the file that will return the needed HTML to the theme server. You can use it to process some things with your theme first, but we'll talk about that a bit later.
-- `resume.hbs`: This is your actual template. This file is sent to the `index.js` for it to send to the theme server.
-- `style.css`: This is where all the CSS of your project goes. Since the `index.js` only returns HTML, the contents of this file are put between `<style>` tags in your `resume.hbs` file.
-
-### package.json
-
-Because you'll need to publish this as your own soon, you'll need to change some of the fields. You can replace the name field with your own theme name, so long as it starts with `jsonresume-theme-`. This prefix will allow your theme to be found by the theme server during deployment.
-
-Next, you'll want to change the description and author. You can change the description to anything you'd like, and the author should be your name.
-
-If you are also putting your theme up on Github, you'll probably want to keep the repository field, but replace the url with your own.
-
-Lastly, you can put all of your theme dependencies in the `dependencies` field. As you can see, we already have [Handlebars](http://handlebarsjs.com/) as one of the dependencies. If you wish not to use Handlebars, you may remove this, and replace it with another templating system.
-
-### index.js
-
-The `index.js` is where all the compiling of your theme, and necessary edits will go.
-
-At the top, you can already see the Node.js `require` function being used with the dependencies. You can obviously add own dependencies, if you are planning on using a different templating system, you can remove it.
-
-The most important part of `index.js` is the `render` function. This is where all the compilation goes. This render function is expected to take a resume object (from a `resume.json`), and should return HTML. In this case, it is returning a compiled Handlebars document. If you removed the Handlebars dependency, you'll want to remove it and replace it with your own templating system compilation.
-
-Above the `return` line are css and template variables. Using the Node.js `fs` module, it reads first the `style.css` and the `resume.hbs`.
-
-### resume.hbs
-
-The `resume.hbs` file is where the actual template is. It contains all of the markup needed for your resume. By default, this is a Handlebars document, but it can obviously be changed into a different templating document.
-
-### style.css
-
-Last but not least, the `style.css` defines your styles. Technically, this is completely optional, as you could just write all of your styles in the `<style>` tags of your `resume.hbs`. As the `index.js`, the contents of the `style.css` are put into the `<style>` tags of your compiled theme later, yet again, this is something can change.
-
-## Deployment
-
-If you are familiar with NPM, you should be done with this in no time.
-
-If you already have an NPM account, you can run `npm login` and enter your username and password. If not, you can run `npm adduser` and fill in the proper fields.
-
-If you changed the dependencies or added new ones, you'll want to run `npm install` again, and just to make sure, run `npm update` to get the latest version of each dependency.
-
-When you are done with that, you may go into your package.json, and edit the version number. When all of the above is finished, you may run `npm publish` to release your theme to the public. Now everyone can use your theme with their resume.
-
-When updating your theme, you'll need to change the version number and run `npm publish` again.
+Contributions to the implementation of new functions or bug fixes are very welcome!
 
 ## License
 
