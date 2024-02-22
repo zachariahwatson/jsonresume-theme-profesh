@@ -3,7 +3,7 @@
     <h1>{{name}}</h1>
     <div class="contact centered">
         {{#if email~}}
-        <span class="vertical-separator">{{email}}</span>
+        <span class="vertical-separator">{{wrapMail email}}</span>
         {{~/if}}
         {{#if phone~}}
         <span class="vertical-separator">{{phone}}</span>
@@ -12,7 +12,7 @@
         <span class="vertical-separator">{{location.city}}, {{location.countryCode}}</span>
         {{~/if}}
         {{#if website~}}
-        <span class="vertical-separator">{{website}}</span>
+        <span class="vertical-separator">{{wrapURL website}}</span>
         {{~/if}}
     </div>
     {{#if summary}}
