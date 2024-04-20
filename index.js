@@ -50,7 +50,7 @@ handlebars.registerHelper({
   },
 
   getValueIfDiffFromPrevious: function (array, index, key) {
-      return (array[index-1] && (array[index][key] === array[index-1][key])) ? '' : array[index][key];
+    return (array[index - 1] && (array[index][key] === array[index - 1][key])) ? '' : array[index][key];
   },
 });
 
@@ -71,5 +71,9 @@ function render(resume) {
 }
 
 module.exports = {
-  render: render
+  render: render,
+  pdfRenderOptions: {
+    format: 'A4',
+    mediaType: 'print',
+  },
 };
