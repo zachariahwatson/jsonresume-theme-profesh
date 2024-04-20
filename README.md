@@ -2,7 +2,11 @@
 
 This is the engineering theme for [JSON Resume](http://jsonresume.org/), based off of [jsonresume-theme-business-professional-compact](https://github.com/yechoorv/jsonresume-theme-business-professional-compact) and aims to implement the best practices for engineering resumes described in https://www.reddit.com/r/EngineeringResumes/wiki/index/. It is intended for [senior/staff level engineers](https://www.reddit.com/r/EngineeringResumes/wiki/index/#wiki_senior_engineers_and_above_.2810.2B_yoe.29).
 
-![Richard Hendriks Resume](./resume.png)
+<p align="center">
+  <kbd>
+    <img src="https://github.com/skoenig/jsonresume-theme-engineering/blob/main/resume.png?raw=true" alt="Richard Hendriks Resume"/>
+  </kbd>
+</p>
 
 ## Getting started
 
