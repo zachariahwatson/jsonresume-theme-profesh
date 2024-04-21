@@ -2,6 +2,14 @@
   "name": "jsonresume-theme-engineering",
   "version": "0.1.8",
   "description": "JSON Resume theme for engineers",
+  "keywords": [
+    "jsonresume",
+    "jsonresume-theme",
+    "json",
+    "resume",
+    "theme",
+    "cv"
+  ],
   "author": "Sören König",
   "repository": {
     "type": "git",
