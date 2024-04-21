@@ -20,18 +20,6 @@ handlebars.registerHelper({
     return new handlebars.SafeString(wrappedAddress);
   },
 
-  concat: function () {
-    let res = '';
-
-    for (let arg in arguments) {
-      if (typeof arguments[arg] !== 'object') {
-        res += arguments[arg];
-      }
-    }
-
-    return res;
-  },
-
   formatAddress: function (address, city, region, postalCode, countryCode) {
     let addressList = addressFormat({
       address: address,
@@ -40,7 +28,6 @@ handlebars.registerHelper({
       postalCode: postalCode,
       countryCode: countryCode
     });
-
 
     return addressList.join('<br/>');
   },
