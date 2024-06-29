@@ -1,7 +1,7 @@
 {
-  "name": "jsonresume-theme-engineering",
-  "version": "0.2.0",
-  "description": "JSON Resume theme for engineers",
+  "name": "jsonresume-theme-dev-ats",
+  "version": "0.1.0",
+  "description": "JSON Resume theme for developers",
   "keywords": [
     "jsonresume",
     "jsonresume-theme",
@@ -10,10 +10,10 @@
     "theme",
     "cv"
   ],
-  "author": "Sören König",
+  "author": "Ashique Kainote",
   "repository": {
     "type": "git",
-    "url": "https://github.com/skoenig/jsonresume-theme-engineering"
+    "url": "https://github.com/asqrzk/jsonresume-theme-dev-ats"
   },
   "license": "MIT",
   "scripts": {
