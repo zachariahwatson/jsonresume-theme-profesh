@@ -20,7 +20,7 @@ Added boldness to key terms, send wrapped inside "<strong></strong>" tag.
 
 <p align="center">
   <kbd>
-    <img src="https://github.com/skoenig/jsonresume-theme-engineering/blob/main/resume.png?raw=true" alt="Richard Hendriks Resume"/>
+    <img src="https://github.com/asqrzk/jsonresume-theme-dev-ats/blob/main/resume.png?raw=true" alt="Rick Astley Resume"/>
   </kbd>
 </p>
 
