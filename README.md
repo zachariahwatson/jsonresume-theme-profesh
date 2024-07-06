@@ -1,6 +1,22 @@
-# jsonresume-theme-engineering [![](https://badge.fury.io/js/jsonresume-theme-engineering.svg)](https://www.npmjs.org/package/jsonresume-theme-engineering)
+# jsonresume-theme-dev-ats 
 
-This is the engineering theme for [JSON Resume](http://jsonresume.org/), based off of [jsonresume-theme-business-professional-compact](https://github.com/yechoorv/jsonresume-theme-business-professional-compact) and aims to implement the best practices for engineering resumes described in https://www.reddit.com/r/EngineeringResumes/wiki/index/. It is intended for [senior/staff level engineers](https://www.reddit.com/r/EngineeringResumes/wiki/index/#wiki_senior_engineers_and_above_.2810.2B_yoe.29).
+This is the developer theme for [JSON Resume](http://jsonresume.org/), based off of [jsonresume-theme-engineering](https://www.npmjs.org/package/jsonresume-theme-engineering) and aims to implement the best practices for developer resumes with ATS compatibility.
+
+## Changes
+
+Added three sections - profiles, projects and certifications.
+
+Added print break compatibility for sections.
+
+Added new profiles design.
+
+Added designation to header.
+
+Added new sanitization for URL links.
+
+Added boldness to key terms, send wrapped inside "<strong></strong>" tag.
+
+
 
 <p align="center">
   <kbd>

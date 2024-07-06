@@ -77,6 +77,37 @@ a {
     text-align: center;
 }
 
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+.col {
+    flex: 1;
+    min-width: 50%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.profile-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    float: left;
+}
+.title-subtitle {
+    flex: 1;
+    min-width: 80px;
+}
+.url {
+    margin-left: 20px;
+    word-break: break-all; 
+    overflow-wrap: break-word; 
+}
+a {
+    word-break: break-all;
+    overflow-wrap: break-word;
+}
+
 /* Set some print settings. */
 @media print {
     @page {
@@ -98,5 +129,17 @@ a {
     }
     .controls {
         display: none;
+    }
+    .section {
+        page-break-inside: avoid; 
+        margin-bottom: 20px; 
+    }
+
+    .section h2 {
+        page-break-after: avoid; 
+    }
+
+    .row, .col {
+        page-break-inside: avoid; 
     }
 }

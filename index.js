@@ -11,7 +11,12 @@ Swag.registerHelpers(handlebars);
 handlebars.registerHelper({
 
   wrapURL: function (url) {
-    const wrappedUrl = '<a href="' + url + '">' + url.replace(/.*?:\/\//g, '') + "</a>";
+    if (url === null || url === '' || url === "") return "";
+    let validUrl;
+    validUrl = new URL(url);
+    const escapedUrl = handlebars.escapeExpression(url);
+    const displayUrl = escapedUrl.replace(/.*?:\/\//g, '');
+    const wrappedUrl = `<a href="${escapedUrl}">${displayUrl}</a>`;
     return new handlebars.SafeString(wrappedUrl);
   },
 
@@ -28,7 +33,6 @@ handlebars.registerHelper({
       postalCode: postalCode,
       countryCode: countryCode
     });
-
     return addressList.join('<br/>');
   },
 
@@ -36,9 +40,17 @@ handlebars.registerHelper({
     return moment(date).format('MMM YYYY');
   },
 
-  getValueIfDiffFromPrevious: function (array, index, key) {
-    return (array[index - 1] && (array[index][key] === array[index - 1][key])) ? '' : array[index][key];
+  even: function (index) {
+    return index % 2 === 0;
   },
+
+  odd: function (index) {
+    return index % 2 !== 0;
+  },
+
+  length: function (array) {
+    return array.length;
+  }
 });
 
 function render(resume) {

@@ -7,13 +7,17 @@
     {{#if startDate}}
     {{#if endDate}}
     <div class="date">
-        {{formatDate startDate}} — {{formatDate endDate}}{{#if startDate2}}{{#if endDate2}}, {{formatDate startDate2}} —
-        {{formatDate endDate2}}{{else}}, {{formatDate startDate2}} — Present{{/if}}{{/if}}
+        {{formatDate startDate}} — {{formatDate endDate}}
     </div>
     {{else}}
     <div class="date">
         {{formatDate startDate}} — Present
     </div>
     {{/if}}
+    {{/if}}
+    {{#if url}}
+    <div class="url">
+        [{{{wrapURL url}}}]
+    </div>
     {{/if}}
 </div>

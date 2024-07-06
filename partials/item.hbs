@@ -1,6 +1,23 @@
-<div class="item">
-    {{> item-header title=title subtitle=subtitle }}
-    {{> item-details location=location startDate=startDate endDate=endDate }}
-    <div class="clearfix"></div>
-    {{> @partial-block }}
+<div class="item-details">
+    {{#if location}}
+    <div class="item-details-title">
+        {{location}}
+    </div>
+    {{/if}}
+    {{#if startDate}}
+    {{#if endDate}}
+    <div class="date">
+        {{formatDate startDate}} — {{formatDate endDate}}
+    </div>
+    {{else}}
+    <div class="date">
+        {{formatDate startDate}} — Present
+    </div>
+    {{/if}}
+    {{/if}}
+    {{#if mainUrl}}
+    <div class="url">
+        [{{wrapURL url}}]
+    </div>
+    {{/if}}
 </div>

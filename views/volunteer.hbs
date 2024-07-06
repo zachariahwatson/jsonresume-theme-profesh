@@ -2,7 +2,7 @@
 <section id="volunteer">
     <h2>Volunteering</h2>
     {{#each resume.volunteer}}
-        {{#> item title=organization subtitle=position location=location startDate=startDate endDate=endDate }}
+        {{#> item title=organization subtitle=position startDate=startDate endDate=endDate}}
         {{#if summary}}
         <div class="summary">
             <p>{{summary}}</p>
