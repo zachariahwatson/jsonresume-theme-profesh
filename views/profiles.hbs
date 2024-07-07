@@ -1,18 +1,30 @@
-{{#if resume.education.length}}
-<section id="education">
-    <h2>Education</h2>
-    {{#each resume.education}}
-    {{#> item title=institution subtitle=studyType location=location startDate=startDate endDate=endDate url=url}}
-    {{#if score}}
-    <ul>
-        <li>
-            <div class="score">
-                {{score}}
+{{#if resume.basics.profiles.length}}
+<section id="profiles">
+    <h2>Profiles</h2>
+    <div class="item">
+        {{#each resume.basics.profiles}}
+            {{#if (even @index)}}
+            <div class="row">
+            {{/if}}
+                <div class="col">
+                    {{#if network}}{{#if username}}{{#if url}}
+                        <div class="profile-details">
+                            <div class="title-subtitle">
+                                {{#> item title=network subtitle=username mainUrl=''}}{{/item}}
+                            </div>
+                            <div class="url">
+                                <a href="{{url}}">{{wrapURL url}}</a>
+                            </div>
+                        </div>
+                    {{/if}}{{/if}}{{/if}}
+                </div>
+            {{#if (odd @index)}}
             </div>
-        </li>
-    </ul>
-    {{/if}}
-    {{/item}}
-    {{/each}}
+            {{/if}}
+        {{/each}}
+        {{#if (odd (length resume.basics.profiles))}}
+        </div>
+        {{/if}}
+    </div>
 </section>
 {{/if}}

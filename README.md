@@ -14,7 +14,7 @@ Added designation to header.
 
 Added new sanitization for URL links.
 
-Added boldness to key terms, send wrapped inside "<strong></strong>" tag.
+Added boldness to key terms, send wrapped inside strong tag.
 
 
 
