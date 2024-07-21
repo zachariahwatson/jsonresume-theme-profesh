@@ -37,7 +37,11 @@ handlebars.registerHelper({
   },
 
   formatDate: function (date) {
-    return moment(date).format('MMM YYYY');
+    if (moment(date).isValid())
+    {
+      return moment(date).format('MMM YYYY');
+    }
+    else return "Present";
   },
 
   even: function (index) {
