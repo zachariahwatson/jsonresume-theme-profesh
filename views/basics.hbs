@@ -1,28 +1,41 @@
 {{#resume.basics}}
-<section id="basics">
-    <h1>{{name}}</h1>
-    <div class="contact centered">
-        {{#if label~}}
-        <span class="vertical-separator">{{label}}</span>
-        {{~/if}}
-        {{#if email~}}
-        <span class="vertical-separator">{{wrapMail email}}</span>
-        {{~/if}}
-        {{#if phone~}}
-        <span class="vertical-separator">{{phone}}</span>
-        {{~/if}}
-        {{#if location~}}{{#if location.city~}}{{#if location.countryCode~}}
-        <span class="vertical-separator">{{location.city}}, {{location.countryCode}}</span>
-        {{~/if}}{{~/if}}{{~/if}}
-        {{#if url~}}
-        <span class="vertical-separator">{{wrapURL url}}</span>
-        {{~/if}}
-    </div>
-    {{#if summary}}
-    <div class="summary">
-        <h2>Summary</h2>
-        <p>{{{summary}}}</p>
-    </div>
-    {{/if}}
-</section>
+	<section id="basics">
+		<h1>{{name}}</h1>
+		<div class="contact centered">
+			{{#if label~}}
+				<span class="vertical-separator">{{label}}</span>
+			{{~/if}}
+			{{#if email~}}
+				<span class="vertical-separator">{{wrapMail email}}</span>
+			{{~/if}}
+			{{#if phone~}}
+				<span class="vertical-separator">{{phone}}</span>
+			{{~/if}}
+			{{#if location~}}{{#if location.city~}}{{#if location.countryCode~}}
+						<span class="vertical-separator">{{location.city}}, {{location.countryCode}}</span>
+					{{~/if}}{{~/if}}{{~/if}}
+			{{#if url~}}
+				<span class="vertical-separator">{{wrapURL url}}</span>
+			{{~/if}}
+		</div>
+		{{#if profiles.length}}
+			<div class="contact centered">
+				{{#each profiles}}
+					{{#if username}}
+						{{#if url}}
+							<span class="vertical-separator">{{wrapURL url}}</span>
+						{{else}}
+							<span class="vertical-separator">{{network}}: {{username}}</span>
+						{{/if}}
+					{{/if}}
+				{{/each}}
+			</div>
+		{{/if}}
+		{{#if summary}}
+			<div class="summary">
+				<h2>Summary</h2>
+				<p>{{{summary}}}</p>
+			</div>
+		{{/if}}
+	</section>
 {{/resume.basics}}
