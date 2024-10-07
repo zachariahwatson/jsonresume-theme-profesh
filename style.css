@@ -11,6 +11,13 @@ h1 {
 	margin: 5px;
 }
 
+h3 {
+	font-size: 19.5px;
+	text-align: center;
+	margin: 5px;
+	font-weight: normal;
+}
+
 h2 {
 	border-width: 1px;
 	border-style: none none solid none;
@@ -69,7 +76,7 @@ a {
 /* basics */
 .vertical-separator {
 	text-align: center;
-	padding: 0 7px;
+	padding: 0 10px;
 }
 
 .vertical-separator:not(:first-child) {
