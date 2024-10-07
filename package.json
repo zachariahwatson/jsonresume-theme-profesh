@@ -1,33 +1,34 @@
 {
-  "name": "jsonresume-theme-dev-ats",
-  "version": "0.2.5",
-  "description": "JSON Resume theme for developers",
-  "keywords": [
-    "jsonresume",
-    "jsonresume-theme",
-    "json",
-    "resume",
-    "theme",
-    "cv"
-  ],
-  "author": "Ashique Kainote",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/asqrzk/jsonresume-theme-dev-ats"
-  },
-  "license": "MIT",
-  "scripts": {
-    "start": "resume serve --theme .",
-    "export": "resume export --theme . resume.pdf"
-  },
-  "dependencies": {
-    "address-format": "0.0.3",
-    "handlebars": "^4.7.8",
-    "handlebars-wax": "^6.1.0",
-    "moment": "^2.30.1",
-    "swag": "^0.7.0"
-  },
-  "devDependencies": {
-    "resume-cli": "^3.1.2"
-  }
+	"name": "jsonresume-theme-profesh",
+	"version": "0.1.0",
+	"description": "Professional JSON Resume theme for new developers/recent graduates",
+	"keywords": [
+		"jsonresume",
+		"jsonresume-theme",
+		"json",
+		"resume",
+		"theme",
+		"cv"
+	],
+	"author": "Zachariah Watson",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/zachariahwatson/jsonresume-theme-profesh"
+	},
+	"license": "MIT",
+	"scripts": {
+		"start": "resume serve --theme .",
+		"export": "resume export --theme . resume.pdf"
+	},
+	"dependencies": {
+		"address-format": "0.0.3",
+		"handlebars": "^4.7.8",
+		"handlebars-wax": "^6.1.0",
+		"jsonresume-theme-profesh": "file:",
+		"moment": "^2.30.1",
+		"swag": "^0.7.0"
+	},
+	"devDependencies": {
+		"resume-cli": "^3.1.2"
+	}
 }
