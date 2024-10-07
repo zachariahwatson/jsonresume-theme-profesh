@@ -1,10 +1,8 @@
 {{#resume.basics}}
 	<section id="basics">
 		<h1>{{name}}</h1>
+		<h3>{{label}}</h3>
 		<div class="contact centered">
-			{{#if label~}}
-				<span class="vertical-separator">{{label}}</span>
-			{{~/if}}
 			{{#if email~}}
 				<span class="vertical-separator">{{wrapMail email}}</span>
 			{{~/if}}
