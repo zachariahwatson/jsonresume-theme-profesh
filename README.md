@@ -1,26 +1,17 @@
-# jsonresume-theme-dev-ats 
+# jsonresume-theme-profesh
 
-This is the developer theme for [JSON Resume](http://jsonresume.org/), based off of [jsonresume-theme-engineering](https://www.npmjs.org/package/jsonresume-theme-engineering) and aims to implement the best practices for developer resumes with ATS compatibility.
+A [JSON Resume](http://jsonresume.org/) theme for new developers/recent graduates. Based off of [jsonresume-theme-dev-ats](https://www.npmjs.org/package/jsonresume-theme-dev-ats).
 
 ## Changes
 
-Added three sections - profiles, projects and certifications.
-
-Added print break compatibility for sections.
-
-Added new profiles design.
-
-Added designation to header.
-
-Added new sanitization for URL links.
-
-Added boldness to key terms, send wrapped inside strong tag.
-
-
+- Rearranged the sections to better suit newer developers
+- Compacted and moved profiles to the top of the page
+- Fleshed out education title
+- Made the user's label its own header in order to prevent overflow in the contact section
 
 <p align="center">
   <kbd>
-    <img src="https://github.com/asqrzk/jsonresume-theme-dev-ats/blob/main/resume.png?raw=true" alt="Rick Astley Resume"/>
+    <img src="https://github.com/zachariahwatson/jsonresume-theme-profesh/blob/main/resume.png?raw=true" alt="Sample Resume"/>
   </kbd>
 </p>
 
@@ -42,7 +33,6 @@ Or if you're on OSX and got [Homebrew](http://brew.sh/) installed:
 ```
 brew install node
 ```
-
 
 ### Install npm packages
 
@@ -71,6 +61,7 @@ Press ctrl-c to stop
 Congratulations, you've made it! You can now start to modify this theme (see Contribute section below).
 
 ## PDF Export
+
 To export your resume, you can run the following command below. This will automatically create a `resume.pdf` file within your current directory:
 
 ```
