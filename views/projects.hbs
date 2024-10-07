@@ -1,13 +1,16 @@
 {{#if resume.projects.length}}
-<section id="projects">
-    <h2>Projects</h2>
-    <div class="item">
+    <section id="projects">
+        <h2>Projects</h2>
         {{#each resume.projects}}
-            {{#if name}}{{#if description}}{{#if url}}
-                {{#> item title=name subtitle=description url=url mainUrl='y'}}   
-                {{/item}}
-            {{/if}}{{/if}}{{/if}}
+            {{#> item title=name subtitle=description startDate=startDate endDate=endDate url=url mainUrl='y'}}
+                {{#if highlights.length}}
+                    <ul class="highlights">
+                        {{#each highlights}}
+                            <li>{{{.}}}</li>
+                        {{/each}}
+                    </ul>
+                {{/if}}
+            {{/item}}
         {{/each}}
-    </div>
-</section>
+    </section>
 {{/if}}
