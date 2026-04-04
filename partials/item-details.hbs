@@ -17,6 +17,10 @@
 				— Present
 			</div>
 		{{/if}}
+	{{else if endDate}}
+		<div class="date">
+			{{formatDate endDate}}
+		</div>
 	{{/if}}
 	{{#if mainUrl}}
 		<div class="url">
