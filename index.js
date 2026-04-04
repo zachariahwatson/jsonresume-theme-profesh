@@ -56,6 +56,11 @@ handlebars.registerHelper({
 		if (!area || typeof area !== "string") return studyType
 		return `${studyType} in ${area}`
 	},
+
+	joinLocation: function (location) {
+		const parts = [location.city, location.region, location.countryCode].filter(Boolean)
+		return parts.join(", ")
+	},
 })
 
 function render(resume) {
