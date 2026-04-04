@@ -9,9 +9,9 @@
 			{{#if phone~}}
 				<span class="vertical-separator">{{phone}}</span>
 			{{~/if}}
-			{{#if location~}}{{#if location.city~}}{{#if location.countryCode~}}
-						<span class="vertical-separator">{{location.city}}, {{location.countryCode}}</span>
-					{{~/if}}{{~/if}}{{~/if}}
+			{{#if location.city~}}
+				<span class="vertical-separator">{{joinLocation location}}</span>
+			{{/if}}
 			{{#if url~}}
 				<span class="vertical-separator">{{wrapURL url}}</span>
 			{{~/if}}
