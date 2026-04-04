@@ -23,7 +23,7 @@
 	},
 	"dependencies": {
 		"address-format": "0.0.3",
-		"handlebars": "^4.7.8",
+		"handlebars": "^4.7.9",
 		"handlebars-wax": "^6.1.0",
 		"jsonresume-theme-profesh": "file:",
 		"moment": "^2.30.1",
