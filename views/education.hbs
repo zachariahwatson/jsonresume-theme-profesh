@@ -3,15 +3,25 @@
         <h2>Education</h2>
         {{#each resume.education}}
             {{#> item title=institution subtitle=(joinEducation studyType area) location=location startDate=startDate endDate=endDate url=url}}
-                {{#if score}}
                     <ul>
+                        {{#if score}}
+                            <li>
+                                <div class="score">
+                                    {{score}}
+                                </div>
+                            </li>
+                        {{/if}}
+                        
+                    {{#if courses.length}}
                         <li>
-                            <div class="score">
-                                {{score}}
+                            <div class="courses">
+                                {{#each courses}}
+                                    {{this}}{{#unless @last}}, {{/unless}}
+                                {{/each}}
                             </div>
                         </li>
+                    {{/if}}
                     </ul>
-                {{/if}}
             {{/item}}
         {{/each}}
     </section>
